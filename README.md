@@ -149,13 +149,13 @@ Saídas observadas na RAM_OUT:
 A figura abaixo mostra a waveform da FSM lendo os 4 bytes da RAM_IN
 e escrevendo as duas palavras de 16 bits na RAM_OUT:
 
-![Waveform da FSM](img/wave_fsm.jpg)
+![Waveform da FSM](img/wave_fsm.jpeg)
 
 Já a figura seguinte mostra o transcript da simulação (Questa/ModelSim),
 com as mensagens de `$display` indicando os dados escritos na RAM_IN e nas
 duas posições da RAM_OUT:
 
-![Transcript da simulação](img/transcript_fsm.jpg)
+![Transcript da simulação](img/transcript_fsm.jpeg)
 
 
 
