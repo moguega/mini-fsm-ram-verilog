@@ -9,7 +9,6 @@ wire [15:0] ram_out_data_wr;
 
 reg [1:0] addr_wr;
 reg [7:0] data_wr;
-reg [7:0] data_read;
 integer i;
 
 wire done;
@@ -54,10 +53,9 @@ endtask
              start = 1;
          @(posedge clk);
              start = 0;
-
-        wait (done);
+         wait (done); 
         
-        #40 $stop;
+            #40 $stop;
     end
     always @(posedge clk) begin
             if (ram_out_we)
