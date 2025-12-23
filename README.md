@@ -121,7 +121,7 @@ start = 0;
 
 // espera done e mais alguns ciclos
 wait (done);
-#10 $stop;
+#40 $stop;
 
 Monitor das escritas na RAM_OUT:
 
@@ -157,7 +157,24 @@ duas posições da RAM_OUT:
 
 ![Transcript da simulação](img/transcript_fsm.jpeg)
 
+## Como rodar a simulação
 
+Abaixo um passo a passo genérico usando ModelSim/Questa:
+
+1. Crie um projeto novo e adicione os arquivos:
+   - `rtl/ram_minima.v`
+   - `rtl/mini_top_fsm.v`
+   - `tb/tb_top_minimo.v`
+
+2. Compile todos os arquivos do projeto.
+
+3. No console do simulador, rode o testbench:
+vsim work.tb_top_minimo
+run -all
+
+4. Observe:
+- No transcript, as mensagens de `$display` mostrando os bytes escritos na RAM_IN e as palavras de 16 bits em RAM_OUT.
+- Na janela de waveform, os sinais `start`, `done`, `ram_in_*` e `ram_out_*` ao longo do tempo.
 
 
 
